@@ -1,46 +1,59 @@
 ---
-import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import Link from "./icons/Link.astro"
-import LinkButton from "./LinkButton.astro"
+// ICONS
+import GitHub from "./icons/GitHub.astro";
+import NextJS from "./icons/NextJS.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+import Wordpress from "./icons/Wordpress.astro";
+// COMPONENTS
+import Tailwind from "./icons/Tailwind.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
 
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    class: "bg-black text-white",
-    icon: NextJS,
-  },
-  TAILWIND: {
-    name: "Tailwind CSS",
-    class: "bg-[#003159] text-white",
-    icon: Tailwind,
-  },
-}
+	NEXT: {
+		name: "Next.js",
+		class: "bg-black text-white",
+		icon: NextJS,
+	},
+	TAILWIND: {
+		name: "Tailwind CSS",
+		class: "bg-[#003159] text-white",
+		icon: Tailwind,
+	},
+	ASTRO: {
+		name: "Astro",
+		class: "bg-[#1F1F1F] text-white",
+		icon: AstroIcon,
+	},
+	WORDPRESS: {
+		name: "Wordpress",
+		class: "bg-[#F1F1F1] text-black",
+		icon: Wordpress,
+	},
+};
 const PROJECTS = [
-  {
-    title: "SVGL - A beautiful library with SVG logos",
-    description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-  {
-    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
-    description:
-      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
-  },
-]
+	{
+		title: "VISIORWARE Landing Page",
+		description:
+			"Landing page de una empresa que se dedica a vender servicios informáticos a empresas y particulares.",
+		link: "https://www.visiorware.com/",
+		image: "/projects/visiorware.webp",
+		tags: [TAGS.ASTRO, TAGS.TAILWIND],
+	},
+	{
+		title: "Wordpress Landing Page",
+		description:
+			"Landing page de una empresa de servicios técnicos en Tarragona. Hecha con Wordpress usando un sistema de bloques, formularios de contacto, sistema de cache, securizacion para reducir los ataques y RankMath para SEO.",
+		link: "https://www.serveistarragona.es/",
+		image: "/projects/serveistarragona.webp",
+		tags: [TAGS.WORDPRESS],
+	},
+];
 ---
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -68,13 +81,13 @@ const PROJECTS = [
 
       <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
       <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
+          {/* {github && (
             <LinkButton href={github}>
               <GitHub class="size-6" />
               Code
               
             </LinkButton>
-          )}
+          )} */}
           {link && (
             <LinkButton href={link}>
               <Link class="size-4" />
