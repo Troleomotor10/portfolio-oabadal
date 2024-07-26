@@ -3,6 +3,7 @@
 import NextJS from "./icons/NextJS.astro";
 import AstroIcon from "./icons/AstroIcon.astro";
 import Wordpress from "./icons/Wordpress.astro";
+import RepairComputer from "./icons/RepairComputer.astro";
 // COMPONENTS
 import Tailwind from "./icons/Tailwind.astro";
 import Link from "./icons/Link.astro";
@@ -29,6 +30,11 @@ const TAGS = {
 		class: "bg-[#F1F1F1] text-black",
 		icon: Wordpress,
 	},
+	REPAIRCOMPUTER: {
+		name: "Reparación y mantenimiento de ordenadores",
+		class: "bg-[#F1F1F1] text-black",
+		icon: RepairComputer,
+	},
 };
 const PROJECTS = [
 	{
@@ -46,6 +52,13 @@ const PROJECTS = [
 		link: "https://www.serveistarragona.es/",
 		image: "/projects/serveistarragona.webp",
 		tags: [TAGS.WORDPRESS],
+	},
+	{
+		title: "Montaje y configuracion de ordenadores",
+		description:
+			"Montaje y configuracion de ordenadores para diversos tipos de uso. Desde ordenadores muy sencillos para ofimatica hasta ordenadores profesionales para gaming o edicion de videos y fotografia. Usando sistemas operativos como Windows o Linux.",
+		image: "/projects/mantenimiento-ordenadores.webp",
+		tags: [TAGS.REPAIRCOMPUTER],
 	},
 ];
 ---
