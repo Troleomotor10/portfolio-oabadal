@@ -4,6 +4,7 @@ import NextJS from "./icons/NextJS.astro";
 import AstroIcon from "./icons/AstroIcon.astro";
 import Wordpress from "./icons/Wordpress.astro";
 import RepairComputer from "./icons/RepairComputer.astro";
+import I18N from "./icons/I18N.astro";
 // COMPONENTS
 import Tailwind from "./icons/Tailwind.astro";
 import Link from "./icons/Link.astro";
@@ -35,20 +36,33 @@ const TAGS = {
 		class: "bg-[#F1F1F1] text-black",
 		icon: RepairComputer,
 	},
+	I18N: {
+		name: "I18N",
+		class: "bg-[#2f2f2f] text-white",
+		icon: I18N,
+	},
 };
 const PROJECTS = [
 	{
 		title: "VISIORWARE Landing Page",
 		description:
-			"Landing page de una empresa que se dedica a vender servicios informáticos a empresas y particulares.",
+			"Landing page para empresa que ofrece servicios informáticos a empresas y particulares. Altas velocidades de carga y información concisa y clara para brindar una excelente experiencia al usuario.",
 		link: "https://www.visiorware.com/",
 		image: "/projects/visiorware.webp",
 		tags: [TAGS.ASTRO, TAGS.TAILWIND],
 	},
 	{
+		title: "DIPROMAT S.L. Landing Page",
+		description:
+			"Landing page multilingüe para empresa de productos químicos de limpieza industrial. Carga ultrarrápida y experiencia de usuario optimizada, proporcionando información clara y concisa.",
+		link: "https://www.dipromat.com/",
+		image: "/projects/dipromat.webp",
+		tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.I18N],
+	},
+	{
 		title: "Wordpress Landing Page",
 		description:
-			"Landing page de una empresa de servicios técnicos en Tarragona. Hecha con Wordpress usando un sistema de bloques, formularios de contacto, sistema de cache, securizacion para reducir los ataques y RankMath para SEO.",
+			"Landing page de una empresa de servicios técnicos en Tarragona. Hecha con Wordpress usando sistema de bloques, formularios de contacto, sistema de cache, securizacion para reducir los ataques y RankMath para SEO.",
 		link: "https://www.serveistarragona.es/",
 		image: "/projects/serveistarragona.webp",
 		tags: [TAGS.WORDPRESS],
