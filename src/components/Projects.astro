@@ -5,6 +5,7 @@ import AstroIcon from "./icons/AstroIcon.astro";
 import Wordpress from "./icons/Wordpress.astro";
 import RepairComputer from "./icons/RepairComputer.astro";
 import I18N from "./icons/I18N.astro";
+import LARAVEL from "./icons/Laravel.astro";
 // COMPONENTS
 import Tailwind from "./icons/Tailwind.astro";
 import Link from "./icons/Link.astro";
@@ -41,6 +42,11 @@ const TAGS = {
 		class: "bg-[#2f2f2f] text-white",
 		icon: I18N,
 	},
+	LARAVEL: {
+		name: "Laravel",
+		class: "bg-[#2f2f2f] text-white",
+		icon: LARAVEL,
+	},
 };
 const PROJECTS = [
 	{
@@ -60,12 +66,12 @@ const PROJECTS = [
 		tags: [TAGS.ASTRO, TAGS.TAILWIND, TAGS.I18N],
 	},
 	{
-		title: "Wordpress Landing Page",
+		title: "Mundirejas WebPage",
 		description:
-			"Landing page de una empresa de servicios técnicos en Tarragona. Hecha con Wordpress usando sistema de bloques, formularios de contacto, sistema de cache, securizacion para reducir los ataques y RankMath para SEO.",
-		link: "https://www.serveistarragona.es/",
-		image: "/projects/serveistarragona.webp",
-		tags: [TAGS.WORDPRESS],
+			"Pagina web para una empresa que se especializa en la fabricación y venta de rejas ballesta. Hecha en Wordpress usando un tema personalizado con un sistema multilenguaje, tienda online, formularios de contacto, sistema de cache, securizacion para reducir los ataques y herramientas amigables para el SEO.",
+		link: "https://www.mundirejas.es/",
+		image: "/projects/mundirejas.webp",
+		tags: [TAGS.WORDPRESS, TAGS.LARAVEL, TAGS.TAILWIND],
 	},
 	{
 		title: "Montaje y configuracion de ordenadores",
